@@ -8,13 +8,14 @@ function validar(){
     correo, 
     fecha, 
     hora, 
+    selectOption,
     expresionNombre, 
     expresionApellidos, 
     expresionEdad,
     expresionEmail, 
-    expresionFecha;
+    expresionFecha,
+    expresionRut;
 
-    const especialidades = [];
     
     rut = document.getElementById("rut").value; 
     nombre = document.getElementById("nombre").value; 
@@ -23,19 +24,27 @@ function validar(){
     correo = document.getElementById("correo").value; 
     fecha = document.getElementById("fecha").value; 
     hora = document.getElementById("hora").value; 
+    selectOption= document.getElementById("especialidad").value;
+
+
+    let fechaSeparada= fecha.split("-");
+    let fechaSeparadaInvertida= fechaSeparada.reverse();
+    let fechaDMA= fechaSeparadaInvertida.join("-");
+
 
     //expresiones regulares
+    expresionRut= /^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$/;
     expresionNombre= /[a-zA-Z]/;
-    expresionApellidos= /^[A-Za-z _]*[A-Za-z][A-Za-z _]*$/;
-    expresionEdad=/[0-9]/;
+    expresionApellidos= /^[a-zA-Z\ áéíóúÁÉÍÓÚñÑ\s]*$/;
+    expresionEdad=/^[0-9]{1,2}$/;
     expresionEmail=/\w+@\w+\.+[a-z]/;
-    expresionFecha=/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+    expresionFecha=/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
     // condicionales
     if (nombre === "" || apellidos === "" || edad === "" || correo === "" || fecha === "" || hora === "") {
         alert("Todos los campos son obligatorios");
         return false;
-    }else if(isNaN(rut)){
+    }else if(!expresionRut.test(rut)){
         alert("Rut ingresado es incorrecto");
         return false;
     }else if(nombre.length > 10){
@@ -62,19 +71,39 @@ function validar(){
     }else if(!expresionEmail.test(correo)){
         alert("Debes ingresar un correo valido, example@company.com");
         return false;
-    }else if(!expresionFecha.test(fecha)){
+    }else if(!expresionFecha.test(fechaDMA)){
         alert("Fecha incorrecta");
         return false;
     }else {
-        alert("Gracias ha sido un éxito");
+        boton();
         return false;
-    };
+        }
+
+       
+    
+
+// funcion click registrar
+        function boton(){
+            let boton01= document.getElementById("botonRegistrar");
+            boton01.addEventListener("click",function(){
+                let parrafo= document.createElement('p');
+                parrafo.innerHTML= `Estimado(a) ${nombre} ${apellidos} y su Rut: ${rut}, su hora para ${selectOption} ha sido reservada para el día ${fechaDMA} a las ${hora}. Además, se le envió un mensaje a su correo ${correo} con el detalle de su cita.
+                Gracias por preferirnos.`;
+                document.body.appendChild(parrafo);
+                return boton();
+               
+            });
+        }
+
+
+
+
+
+};
     
 
 
-
-
-
+   
 
 
 
@@ -95,7 +124,7 @@ function validar(){
   
 
 
-}   
+   
 
 
 

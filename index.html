@@ -15,10 +15,25 @@
         <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" class="inputCss">
         <input type="text" id="edad" name="edad" placeholder="Ingrese su edad" class="inputCss">
         <input type="text" id="correo" name="correo" placeholder="example@dominio.com" class="inputCss">
-        <select name="especialistas" id="especialistas" class="inputCss"></select>
-        <input type="text" id="fecha" name="fecha" class="inputCss" placeholder="dd-mm-yy">
+        <select name="especialidad" id="especialidad">
+            <option value="selecciona">-Selecciona-</option>
+            <option value="Pediatria">Pedriatria</option>
+            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+            <option value="Radiologia">Radiologia</option>
+            <option value="Reumatologia">Reumatologia</option>
+            <option value="Psiquiatria">Psiquiatria</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Traumatologia">Traumatologia</option>
+            <option value="Geriatria">Geriatria</option>
+            <option value="Ginecologia">Ginecologia</option>
+            <option value="Kinesiologia">Kinesiologia</option>
+            <option value="Dermatologia">Dermatologias</option>
+          </select>
+        <input type="date" id="fecha" name="fecha" value="22-07-2020" min="01-01-2020" max="01-01-2021">
         <input type="time" id="hora" name="hora" class="inputCss">
-        <input type="submit" value="Registrar" class="inputCss">
+        <input type="submit" onclick="return boton();" id="botonRegistrar" value="Registrar">
+    
+    
 
       
     </form>
