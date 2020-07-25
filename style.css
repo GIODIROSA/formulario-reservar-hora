@@ -2,21 +2,146 @@ body{
     padding: 0;
     margin:0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background: #f9d56e;
+    height: 100vh;
 }
 h1{
     text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    color: #221f3b;
+    margin: 20px 0px 0px;
+}
+h4{
+    text-align: center;
+    color: tomato;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px 0px 20px;
+
 }
 
 form{
-    margin: 0 auto;
-    padding: 20px;
-    width: 300px;
+    margin: auto;
+    padding: 30px;
+    width: 400px;
+    background: #6f4a8e;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
-input{
-    border-radius: 3px;
-    outline: none;
-    margin-bottom: 10px;
-  
-    width: 280px;
-    height: 30px;
+.inputCss{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: #d3dbff;
+    border: 2px solid #8fcfd1;
+    font-size: 1em;
+}
+ 
+
+ #especialidad{
+     border-radius: 5px;
+     margin: 20px 5px;
+     background-color: #d3dbff;
+ }
+ 
+ form .boton{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 16px;
+    background: #ede682;
+    border: none;
+    box-shadow: 2px 2px 5px gray;
+
+ }
+
+ .boton:hover{
+     background: hotpink;
+     transition-delay: .2s;
+
+ }
+
+ #fecha{
+     border: none;
+     padding: 10px;
+     font-size: 16px;
+     font-weight: 400;
+     border-radius: 20px;
+    
+ }
+
+ p{
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 25px;
+    text-align: left;
+    font-size: 0.75em;
+    width: 650px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #7fdbda;
+ }
+
+ #especialidad{
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    text-align: center;
+    background: #05dfd7;
+    color: #3282b8;
+ }
+
+ #consulta{
+    margin: auto;
+    width: 350px;
+    height: 35px;
+    font-size: 1em;
+ }
+ #calender{
+    margin: auto;
+    margin-bottom: 15px;
+    width: 350px;
+    height: 50px;
+    font-size: 1em;
+    text-align: center;
+    background: #f5f1da;
+ }
+
+ #hora{
+     width: 100px;
+     border: none;
+     padding: 5px 0px;
+     margin-left: 20px;
+     border-radius: 5px;
+ }
+ 
+ #fecha{
+    margin-top: 10px;
+ }
+ span{
+     font-size: 10px;
+ }
+
+ #selectHora{
+     border: none;
+     padding: 8px 20px;
+     border-radius: 60px;
+     background-color: #6a2c70;
+     color: white;
+     margin-left: 10px;
+ }
+
+ #resetear{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 16px;
+    background: #f4f6ff;
+    border: none;
+    box-shadow: 2px 2px 5px gray;
  }

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=}, initial-scale=1.0">
     <title>Reserva de hora</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <h1>Reserva de hora</h1>
+    <h1>RESERVA DE HORA</h1>
+    <h4>Clinica Plaza de la Dignidad</h4>
 
-    <form onsubmit="return validar();">
-        <input type="text" id="rut" name="rut" placeholder="Ingrese su rut" class="inputCss">
+    <form onsubmit="return validar()">
+        <input type="text" id="rut" name="rut" placeholder="Ingrese su Rut" class="inputCss">
         <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" class="inputCss">
-        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" class="inputCss">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus Apellidos" class="inputCss">
         <input type="text" id="edad" name="edad" placeholder="Ingrese su edad" class="inputCss">
         <input type="text" id="correo" name="correo" placeholder="example@dominio.com" class="inputCss">
         <select name="especialidad" id="especialidad">
-            <option value="selecciona">-Selecciona-</option>
             <option value="Pediatria">Pedriatria</option>
             <option value="Otorrinolaringologia">Otorrinolaringologia</option>
             <option value="Radiologia">Radiologia</option>
@@ -29,15 +30,23 @@
             <option value="Kinesiologia">Kinesiologia</option>
             <option value="Dermatologia">Dermatologias</option>
           </select>
-        <input type="date" id="fecha" name="fecha" value="22-07-2020" min="01-01-2020" max="01-01-2021">
-        <input type="time" id="hora" name="hora" class="inputCss">
-        <input type="submit" onclick="return boton();" id="botonRegistrar" value="Registrar">
-    
-    
-
-      
+          <p id="calender">
+              Elige el día de la consulta: <input type="date" id="fecha" name="fecha" min="01-01-2020" max="01-01-2021" step="1" autofocus="autofocus">
+              
+          </p>
+        <p id="consulta">
+            Elige la hora: <input type="time" id="hora" name="limitetiempo" min="12:00" max="18:00" step="600"> <br>
+            <span class="horario">hora de atención desde las 12:00 hasta las 18hrs.</span> 
+        </p>
+        
+        <input type="submit" id="botonRegistrar" value="Reservar" class="boton">
+        <input type="reset" id="resetear" value="volver">
+        
+        
+        
+        
     </form>
-
+    
 
     <script type="text/javascript" src="main.js"></script>
     
