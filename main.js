@@ -102,7 +102,6 @@ function validar(){
             let caja = document.createElement('div');
             let contenido = document.createTextNode(`Estimado(a) ${nombre} ${apellidos} y su Rut: ${rut}, su hora para ${selectOption} ha sido reservada para el día ${fechaDMA} a las ${hora}. Además, se le envió un mensaje a su correo ${correo} con el detalle de su cita. Gracias por preferirnos`);
             caja.appendChild(contenido);
-            caja.setAttribute('class', 'caja azul');
             let contenedor = document.getElementById('contenedor');
             contenedor.appendChild(caja);
             }
