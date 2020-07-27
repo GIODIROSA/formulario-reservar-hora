@@ -84,17 +84,29 @@ function validar(){
         
         
         // // funcion click registrar
-           function boton(){
-               let boton01= document.getElementById("botonRegistrar");
-               let caja = document.getElementById('box');
-               boton01.addEventListener("click",function(){
-                   let parrafo= document.createElement('p');
-                   parrafo.innerHTML= `Estimado(a) ${nombre} ${apellidos} y su Rut: ${rut}, su hora para ${selectOption} ha sido reservada para el día ${fechaDMA} a las ${hora}. <br> Además, se le envió un mensaje a su correo ${correo} con el detalle de su cita. <br>
-                   Gracias por preferirnos.`;
-                   document.body.appendChild(parrafo);
+        //    function boton(){
+        //        let boton01= document.getElementById("botonRegistrar");
+        //        let caja = document.getElementById('box');
+        //        boton01.addEventListener("click",function(){
+        //            let parrafo= document.createElement('p');
+        //            parrafo.innerHTML= `Estimado(a) ${nombre} ${apellidos} y su Rut: ${rut}, su hora para ${selectOption} ha sido reservada para el día ${fechaDMA} a las ${hora}. <br> Además, se le envió un mensaje a su correo ${correo} con el detalle de su cita. <br>
+        //            Gracias por preferirnos.`;
+        //            document.body.appendChild(parrafo);
                    
-               });
-           }
+        //        });
+        //    }
+
+        // prueba
+
+        function boton(){
+            let caja = document.createElement('div');
+            let contenido = document.createTextNode(`Estimado(a) ${nombre} ${apellidos} y su Rut: ${rut}, su hora para ${selectOption} ha sido reservada para el día ${fechaDMA} a las ${hora}. Además, se le envió un mensaje a su correo ${correo} con el detalle de su cita. Gracias por preferirnos`);
+            caja.appendChild(contenido);
+            caja.setAttribute('class', 'caja azul');
+            let contenedor = document.getElementById('contenedor');
+            contenedor.appendChild(caja);
+            }
+
 
 // function de validaciones
  function errorRut(){
